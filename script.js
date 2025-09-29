@@ -3,3 +3,4 @@ function iframeError() {
     iframe.style.display = 'none';
     document.getElementById('embed-block-message').style.display = 'block';
 }
+window.iframeError = iframeError;
