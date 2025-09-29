@@ -1,0 +1,82 @@
+PETICIÓN PARA IMPLEMENTAR EMBED EN GITHUB PAGES (SIN SALIR DEL DOMINIO) + CUADRO FIJO DE CONTACTO
+
+Contexto (importante):
+
+El sitio se hospeda en GitHub Pages (estático).
+
+La página externa de FOTON debe mostrarse únicamente embebida dentro de mi dominio.
+
+No se permite mostrar ni redirigir a la “página original” en pestaña nueva u otra ventana.
+
+Nota: Si la web de destino impide el embed (cabeceras de seguridad tipo X-Frame-Options o CSP), no implementar ningún fallback que abra la URL fuera de mi dominio. En ese caso, mostrar únicamente un mensaje neutral en la misma página (sin enlaces externos) y permanecer siempre dentro de mi sitio.
+
+Objetivo funcional
+
+Habilitar en mi sitio (GitHub Pages) una vista/página que cargue dentro el sitio de FOTON:
+https://www.fotonmotor.com/digital360/index.html#:~:text=TRUCK%E2%89%AB
+usando exclusivamente el HTML de iframe provisto arriba, a pantalla completa, sin bordes, sin scroll extra.
+
+Mostrar por encima del contenido embebido, en la esquina superior derecha, un cuadro fijo con estas características:
+
+Tamaño exacto en desktop: 936 × 154 píxeles.
+
+Fondo sólido (no transparente): #D6DDE5.
+
+Sin bordes (no debe renderizar ningún borde).
+
+Sin título (no debe aparecer ningún encabezado/título dentro del cuadro).
+
+Texto visible dentro del cuadro: Jhon Pérez | Foton | Perú.
+
+Botones dentro del cuadro:
+
+WhatsApp: abrir conversación con el número +51 937375605 con mensaje prellenado en español (p. ej. “Hola Jhon, te contacto desde tu tarjeta web.”).
+
+Gmail (Redactar): abrir el compose de Gmail dirigido a jhoncarlosperezcubas@gmail.com
+, con asunto “Consulta – Tarjeta FOTON” y cuerpo base en español.
+
+El cuadro debe permanecer siempre visible (fijo) por encima del iframe (z-index adecuado) y alineado a la esquina superior derecha.
+
+El cuadro no debe permitir ver ni “tapar” elementos para mostrar la página original del dominio externo; su función es de contacto y branding.
+
+Comportamiento de enlaces de contacto (solo para WhatsApp/Gmail):
+
+Pueden abrirse en pestaña nueva, manteniendo mi sitio abierto (esto es independiente del embed de FOTON, que no debe abrirse fuera).
+
+No mostrar las URL en texto; el usuario solo ve los botones.
+
+Accesibilidad: etiquetas ARIA descriptivas para cada botón.
+
+Navegación y estructura (GitHub Pages):
+
+Mantener la solución compatible con GitHub Pages (hosting estático).
+
+Si se usa ruteo por hash para esta vista, asegurarse de que el refresco no rompa (sin 404).
+
+El archivo que contenga el iframe debe mantener el HTML exacto indicado (misma estructura y estilos inline).
+
+En caso de bloqueo del embed por políticas del sitio externo:
+
+No abrir la URL de destino fuera de mi dominio.
+
+No implementar botones de “Abrir en nueva pestaña”.
+
+Mostrar un mensaje neutral dentro de mi página (sin enlaces salientes) indicando que el contenido no se puede visualizar embebido.
+
+El cuadro fijo (936×154, sin bordes, fondo #D6DDE5, con el texto “Jhon Pérez | Foton | Perú” y los botones de WhatsApp/Gmail) debe seguir visible.
+
+Estilo/Marca:
+
+El cuadro debe respetar exactamente el color de fondo #D6DDE5, sin transparencia, sin bordes, sin títulos adicionales.
+
+El texto Jhon Pérez | Foton | Perú debe ser legible y estar bien alineado con los dos botones.
+
+Entrega y verificación:
+
+Entregar la vista/página funcional en GitHub Pages que embeba la URL indicada, usando solo el HTML del iframe provisto.
+
+Verificar que el cuadro cumple dimensiones, color y contenido especificado, sin bordes y sin título.
+
+Confirmar que los botones de WhatsApp y Gmail funcionan correctamente.
+
+Confirmar que nunca se muestra la “página original” fuera de mi dominio (no redirecciones, no nuevas pestañas para el embed; sólo WhatsApp/Gmail pueden abrirse en nueva pestaña).
